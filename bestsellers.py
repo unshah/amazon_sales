@@ -1,6 +1,12 @@
 #Hello this scrip will list out all the best sellers on Amazon.com
+import requests
+from bs4 import BeautifulSoup as bs
 
-import beautifulsoup from bs4 as soup
+#Load the webpage
+r = requests.get("https://www.amazon.com/Best-Sellers/zgbs/fashion/ref=zg_bs_nav_0")
 
+ #convert to bautiful soup object
+ soup = bs(r.content)
 
-url = "https://www.amazon.com/Best-Sellers/zgbs/fashion/ref=zg_bs_nav_0"
+ #print HTML
+ print(soup)
