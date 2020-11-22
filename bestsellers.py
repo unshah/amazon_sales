@@ -9,4 +9,9 @@ r = requests.get("https://www.amazon.com/Best-Sellers/zgbs/fashion/ref=zg_bs_nav
 soup = bs(r.content)
 
 #print HTML
-print(soup)
+#print(soup.prettify())
+
+#Get Title
+
+title = soup.find("title")
+print(title)
