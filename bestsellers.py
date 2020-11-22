@@ -8,5 +8,5 @@ r = requests.get("https://www.amazon.com/Best-Sellers/zgbs/fashion/ref=zg_bs_nav
 #convert to bautiful soup object
 soup = bs(r.content)
 
- #print HTML
- print(soup)
+#print HTML
+print(soup)
